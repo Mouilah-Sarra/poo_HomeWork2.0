@@ -5,8 +5,6 @@ import java.util.ArrayList;
  */
 
 
-//J'ai une ERREUR dans la methode (affichAmie_deNation) <la Condition>
-//J' une autre ERREUR dans la metthode de (Suppretion d'amie) <dans le nouvelle affichage apres Suppretion l'amie Supprimé s'affiche>
 
 public class User {
     private String iD;
@@ -79,7 +77,7 @@ public class User {
             System.out.println("\n\tVos amie de(d') "+nation+" sont :\n");
             int j=0;
             for (int i = 0; i < this.listeAmie.size(); i++) {
-                if (this.listeAmie.get(i).country == nation) {       /*ERREUR incomprehensible*/
+                if (this.listeAmie.get(i).country.equalsIgnoreCase( nation)) {
                     System.out.println("*" + listeAmie.get(i).iD + " agé de " + listeAmie.get(i).age + " est un habitant de(d') " + listeAmie.get(i).country);
                     j++;
                 }
@@ -123,7 +121,7 @@ public class User {
         int i = 0;
         boolean v = false;
         while ( i<listeAmie.size() ) {
-            if (listeAmie.get(i).iD == idUser)
+            if (listeAmie.get(i).iD.equalsIgnoreCase( idUser))
                 v = true;
             i++;
         }
@@ -135,7 +133,7 @@ public class User {
         int i = 0;
         int j = 0;
         while ( i<listeAmie.size()) {
-            if (listeAmie.get(i).iD == amie)
+            if (listeAmie.get(i).iD.equalsIgnoreCase(amie))
                 j = i;
             i++;
         }

@@ -8,7 +8,6 @@ import java.util.Scanner;
  */
 
 
-//2 Erreur a voir (pour plus de detail allez dans la classe User)
 
 
 public class Main {
